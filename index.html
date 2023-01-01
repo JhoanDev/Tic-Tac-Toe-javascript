@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo da velha</h1>
+    </header>
+    <div class="box">
+        <div class="span">
+            <section class="conteiner">
+                <div class="placar">
+                    <p class="top"><b>Placar</b></p>
+                    <p class="playerx">Player X: <b id="x">0</b></p>
+                    <p class="playero">Player O: <b id="o">0</b></p>
+                    <p class="vezdo" id="vezdo">Vez do</p>
+                    <p id="vezres"><b>|Player X|</b></p>
+                </div>
+                <div class="boxgame">
+                    <div class="linhas" id="linha1"></div>
+                    <div class="linhas" id="linha2"></div>
+                    <div class="linhas" id="linha3"></div>
+                    <div class="linhas" id="linha4"></div>
+                    <div class="xo" id="xo1" onclick="playxo(1)"><p class="xol"><b></b></p></div>
+                    <div class="xo" id="xo2" onclick="playxo(2)"><p class="xol"><b></b></p></div>
+                    <div class="xo" id="xo3" onclick="playxo(3)"><p class="xol"><b></b></p></div>
+                    <div class="xo" id="xo4" onclick="playxo(4)"><p class="xol"><b></b></p></div>
+                    <div class="xo" id="xo5" onclick="playxo(5)"><p class="xol"><b></b></p></div>
+                    <div class="xo" id="xo6" onclick="playxo(6)"><p class="xol"><b></b></p></div>
+                    <div class="xo" id="xo7" onclick="playxo(7)"><p class="xol"><b></b></p></div>
+                    <div class="xo" id="xo8" onclick="playxo(8)"><p class="xol"><b></b></p></div>
+                    <div class="xo" id="xo9" onclick="playxo(9)"><p class="xol"><b></b></p></div>
+                </div>       
+            </section>
+        </div>        
+    </div>
+    <footer>
+        <P>&copy; JhoanDev</P>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

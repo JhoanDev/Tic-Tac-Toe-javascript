@@ -1,8 +1,8 @@
-var placarx = document.getElementById('x')
-var placaro = document.getElementById('o')
-var vezdos = document.getElementById('vezres')
+var placarx = document.getElementById('x') //pontos do x
+var placaro = document.getElementById('o') //pontos do o
+var vezdos = document.getElementById('vezres') 
 var vezdo = document.getElementById('vezres')
-var xo1 = document.getElementById('xo1')
+var xo1 = document.getElementById('xo1') //quadrados clicaveis
 var xo2 = document.getElementById('xo2')
 var xo3 = document.getElementById('xo3')
 var xo4 = document.getElementById('xo4')
@@ -11,31 +11,31 @@ var xo6 = document.getElementById('xo6')
 var xo7 = document.getElementById('xo7')
 var xo8 = document.getElementById('xo8')
 var xo9 = document.getElementById('xo9')
-var qnt = 0 
-var player = 'x'
-var x = []
-var o = []
-var xw = 0
-var ow = 0 
-var qntdraw = 0
-var qntwc = 0
+var qnt = 0 //controle
+var player = 'x' //player inicial
+var x = [] //array
+var o = [] //array
+var xw = 0 // qnt de pontos  
+var ow = 0  
+var qntdraw = 0 //controle de empates
+var qntwc = 0 
 var n
 
-function desabilitarFunção(id){
+function desabilitarFunção(id){ // função pra desabilitar o click nas areas ocupadas
     document.getElementById(id).setAttribute('onclick', 'desabilitado()');
 }
   
-function habilitarFunção(id, n){
+function habilitarFunção(id, n){ // autoexplicativo 
     document.getElementById(id).setAttribute('onclick', `playxo(${n})`);
 }
 
-function Winningcombinations(first, last)
+function Winningcombinations(first, last) //verificar se a array contem alguma combinação vitoriosa
 {
     var result = first.filter(function(item){ return last.indexOf(item) > -1});   
     return result.length;  
 } 
 
-function resetgame() {
+function resetgame() { //reset apos fim da partida
     xo1.innerHTML = ''
     xo2.innerHTML = ''
     xo3.innerHTML = ''
@@ -61,7 +61,7 @@ function resetgame() {
     habilitarFunção('xo9', 9)
 }
 
-function endgame() {
+function endgame() { //verifição
     qntwc++
     if (((Winningcombinations([1,2,3],x)) === 3) || ((Winningcombinations([4,5,6],x)) === 3) ||  ((Winningcombinations([7,8,9],x)) === 3) || ((Winningcombinations([1,4,7],x)) === 3) || ((Winningcombinations([2,5,8],x)) === 3) || ((Winningcombinations([3,6,9],x)) === 3) || ((Winningcombinations([1,5,9],x)) === 3) ||((Winningcombinations([3,5,7],x)) === 3)) {
         xw++
@@ -97,7 +97,7 @@ function endgame() {
     }
 }
 
-function playxo(X) {
+function playxo(X) { //decisão de onde vai jogar e de quem é a proxima rodada
     if (qnt%2 == 0 && qnt <= 9 && x.indexOf(X) == -1 && o.indexOf(X) == -1)  {
         vezdo.innerHTML = '<b>|Player O|</b>'
         vezdo.style.color = 'red'
@@ -251,5 +251,5 @@ function playxo(X) {
             break;
     }
     qnt++
-    endgame()
+    setTimeout(endgame, 100)
 }

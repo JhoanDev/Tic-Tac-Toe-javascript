@@ -1,1 +1,3 @@
-# Basicamente um jogo da velha feito em js
+# Jogo da velha
+
+## feito em Nodejs

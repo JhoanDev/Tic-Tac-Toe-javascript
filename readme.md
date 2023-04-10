@@ -6,6 +6,7 @@
 - [Como jogar](#como-jogar)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias utilizadas](#tecnologias)
+- [Como Contribuir](#como-contribuir)
 
 ### Introdução
 
@@ -30,3 +31,7 @@
 ### Tecnologias
 
 - O jogo da velha foi desenvolvido utilizando `HTML5` , `CSS3` e `JavaScript`.
+
+### Como Contribuir 
+  
+ - Caso queira contribuir para o `projeto`, você pode clonar o repositório, fazer suas alterações e enviar um pull request. Suas contribuições serão muito bem-vindas!

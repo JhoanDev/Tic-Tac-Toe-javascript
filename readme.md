@@ -20,6 +20,7 @@
 ### Funcionalidades
 
 - A aplicação possui as seguintes funcionalidades:
+  - O vencedor sempre começa jogando.
   - Tabuleiro para jogar o jogo da velha.
   - Controle de pontos para cada jogador.
   - Controle de quem é o próximo jogador.
